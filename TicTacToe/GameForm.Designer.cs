@@ -155,7 +155,7 @@
             oChoice_button.TabIndex = 10;
             oChoice_button.Text = "О";
             oChoice_button.UseVisualStyleBackColor = true;
-            oChoice_button.Click += oChoice_button_Click;
+            oChoice_button.Click += Choice_button_Click;
             // 
             // xChoice_button
             // 
@@ -165,7 +165,7 @@
             xChoice_button.TabIndex = 9;
             xChoice_button.Text = "Х";
             xChoice_button.UseVisualStyleBackColor = true;
-            xChoice_button.Click += xChoice_button_Click;
+            xChoice_button.Click += Choice_button_Click;
             // 
             // symbolChoice_label
             // 

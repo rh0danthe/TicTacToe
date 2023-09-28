@@ -7,34 +7,20 @@ namespace TicTacToe
             InitializeComponent();
         }
 
-        private void xChoice_button_Click(object sender, EventArgs e)
+        private void Choice_button_Click(object sender, EventArgs e)
         {
+            Button senderButton = (Button)sender;
+            string symbol = senderButton.Text;
             if (firstPlayerChoice_label.Text == "")
             {
-                firstPlayerChoice_label.Text = "Символ первого игрока: Х";
+                firstPlayerChoice_label.Text = "Символ первого игрока: " + symbol;
                 symbolChoice_label.Text = "Второй игрок, выберите символ";
             }
-            else if (firstPlayerChoice_label.Text == "Символ первого игрока: Х")
+            else if (firstPlayerChoice_label.Text == "Символ первого игрока: " + symbol)
                 MessageBox.Show("Этот символ уже занят", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (firstPlayerChoice_label.Text != "Символ первого игрока: Х")
+            else if (firstPlayerChoice_label.Text != "Символ первого игрока: " + symbol)
             {
-                secondPlayerChoice_label.Text = "Символ второго игрока: Х";
-                symbolChoice_panel.Visible = false;
-            }
-        }
-
-        private void oChoice_button_Click(object sender, EventArgs e)
-        {
-            if (firstPlayerChoice_label.Text == "")
-            {
-                firstPlayerChoice_label.Text = "Символ первого игрока: О";
-                symbolChoice_label.Text = "Второй игрок, выберите символ";
-            }
-            else if (firstPlayerChoice_label.Text == "Символ первого игрока: О")
-                MessageBox.Show("Этот символ уже занят", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (firstPlayerChoice_label.Text != "Символ первого игрока: O")
-            {
-                secondPlayerChoice_label.Text = "Символ второго игрока: О";
+                secondPlayerChoice_label.Text = "Символ второго игрока: " + symbol;
                 symbolChoice_panel.Visible = false;
             }
         }

@@ -39,9 +39,9 @@
             middleMiddle = new Button();
             leftUpper = new Button();
             symbolChoice_panel = new Panel();
-            symbolChoice_label = new Label();
-            xChoice_button = new Button();
             oChoice_button = new Button();
+            xChoice_button = new Button();
+            symbolChoice_label = new Label();
             firstPlayerChoice_label = new Label();
             secondPlayerChoice_label = new Label();
             gameField_panel.SuspendLayout();
@@ -147,14 +147,15 @@
             symbolChoice_panel.Size = new Size(330, 108);
             symbolChoice_panel.TabIndex = 1;
             // 
-            // symbolChoice_label
+            // oChoice_button
             // 
-            symbolChoice_label.AutoSize = true;
-            symbolChoice_label.Location = new Point(12, 9);
-            symbolChoice_label.Name = "symbolChoice_label";
-            symbolChoice_label.Size = new Size(289, 25);
-            symbolChoice_label.TabIndex = 2;
-            symbolChoice_label.Text = "Первый игрок, выберите символ:";
+            oChoice_button.Location = new Point(158, 37);
+            oChoice_button.Name = "oChoice_button";
+            oChoice_button.Size = new Size(56, 51);
+            oChoice_button.TabIndex = 10;
+            oChoice_button.Text = "О";
+            oChoice_button.UseVisualStyleBackColor = true;
+            oChoice_button.Click += oChoice_button_Click;
             // 
             // xChoice_button
             // 
@@ -164,15 +165,16 @@
             xChoice_button.TabIndex = 9;
             xChoice_button.Text = "Х";
             xChoice_button.UseVisualStyleBackColor = true;
+            xChoice_button.Click += xChoice_button_Click;
             // 
-            // oChoice_button
+            // symbolChoice_label
             // 
-            oChoice_button.Location = new Point(158, 37);
-            oChoice_button.Name = "oChoice_button";
-            oChoice_button.Size = new Size(56, 51);
-            oChoice_button.TabIndex = 10;
-            oChoice_button.Text = "О";
-            oChoice_button.UseVisualStyleBackColor = true;
+            symbolChoice_label.AutoSize = true;
+            symbolChoice_label.Location = new Point(12, 9);
+            symbolChoice_label.Name = "symbolChoice_label";
+            symbolChoice_label.Size = new Size(289, 25);
+            symbolChoice_label.TabIndex = 2;
+            symbolChoice_label.Text = "Первый игрок, выберите символ:";
             // 
             // firstPlayerChoice_label
             // 
@@ -185,7 +187,7 @@
             // secondPlayerChoice_label
             // 
             secondPlayerChoice_label.AutoSize = true;
-            secondPlayerChoice_label.Location = new Point(576, 114);
+            secondPlayerChoice_label.Location = new Point(557, 128);
             secondPlayerChoice_label.Name = "secondPlayerChoice_label";
             secondPlayerChoice_label.Size = new Size(0, 25);
             secondPlayerChoice_label.TabIndex = 3;

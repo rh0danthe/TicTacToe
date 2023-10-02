@@ -33,5 +33,20 @@ namespace TicTacToe
             gameField[tag] = symbol;
             return checkWinner() == symbol;
         }
+
+        public bool checkDraw(char firstPlayerSymbol, char secondPlayerSymbol)
+        {
+            int firstPlayerCount = 0;
+            int secondPlayerCount = 0;
+            for (int i = 0; i < gameField.Length; i++)
+            {
+                if (gameField[i] == firstPlayerSymbol)
+                    firstPlayerCount++;
+                else if (gameField[i] == secondPlayerSymbol)
+                    secondPlayerCount++;
+            }
+            return ((firstPlayerCount == 4) && (secondPlayerCount == 4));
+
+        }
     }
 }

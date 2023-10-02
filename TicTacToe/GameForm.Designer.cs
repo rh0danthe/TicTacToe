@@ -214,9 +214,9 @@
             symbolChoice_label.Location = new Point(10, 7);
             symbolChoice_label.Margin = new Padding(2, 0, 2, 0);
             symbolChoice_label.Name = "symbolChoice_label";
-            symbolChoice_label.Size = new Size(243, 20);
+            symbolChoice_label.Size = new Size(220, 20);
             symbolChoice_label.TabIndex = 2;
-            symbolChoice_label.Text = "Первый игрок, выберите символ:";
+            symbolChoice_label.Text = "First player, choose your symbol";
             // 
             // firstPlayerChoice_label
             // 
